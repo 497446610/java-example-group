@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <!-- 自己修改jar的路径 -->
+    <classPathEntry location="E:\mysql-connector-java-5.1.44.jar" />
+
+    <context id="MySqlTables" targetRuntime="MyBatis3" defaultModelType="flat">
+        <!-- 分页插件 -->
+<!--
+        <plugin type="MysqlPaginationPlugin"/>
+-->
+
+        <!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 这里的type里写的是实现类的类全路径 -->
+        <commentGenerator type="com.panda.crm.plugin.MyCommentGenerator"></commentGenerator>
+
+        <!-- 自己修改JDBC的路径 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.90.124:3306/crm_dev?useUnicode=true&amp;characterEncoding=utf-8" userId="root"
+                        password="123456">
+
+            <!--针对mysql数据库-->
+            <property name="useInformationSchema" value="true"></property>
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- model的配置 -->
+        <javaModelGenerator targetPackage="com.panda.example.dao.domain"
+                            targetProject="example-dao">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!-- mybatis的xml的配置 -->
+        <sqlMapGenerator targetPackage="mapper"
+                          targetProject="example-dao">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!-- mapper的配置 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.panda.crm.dao" targetProject="E:\tmp">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+        
+        
+        <table tableName="crm_sale_targets" domainObjectName="CrmSaleTargetsPo"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="false" enableSelectByExample="true" selectByExampleQueryId="true">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>

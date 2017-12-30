@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.panda.example.dao.mapper.MemberInfoMapper">
+  <resultMap id="BaseResultMap" type="com.panda.example.dao.domain.member.MemberInfo">
+    <id column="member_id" jdbcType="BIGINT" property="memberId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="address" jdbcType="VARCHAR" propenamety="address" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    member_id, name
+  </sql>
+  
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from member_info
+    where member_id = #{id,jdbcType=BIGINT}
+  </select>
+  
+   <select id="select"  resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from member_info
+  </select>
+  
+  
+  <delete id="deleteMember" parameterType="java.lang.Long">
+    delete from member_info
+    where member_id = #{memberId,jdbcType=BIGINT}
+  </delete>
+ 
+</mapper>
