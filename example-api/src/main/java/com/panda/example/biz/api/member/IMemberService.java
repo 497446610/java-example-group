@@ -38,4 +38,12 @@ public interface IMemberService {
 	 */
 	public String sayHello(String name) throws ServiceException;
 
+	/**
+	 * 数据缓存测试接口
+	 * 
+	 * @return
+	 * @throws ServiceException
+	 */
+	public String cacheData() throws ServiceException;
+
 }

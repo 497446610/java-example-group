@@ -16,5 +16,10 @@ public class MemberController {
 	public String sayHello(String name) {
 		return memberSerivce.sayHello(name);
 	}
+	
+	@RequestMapping("/cache")
+	public String cache() {
+		return memberSerivce.cacheData();
+	}
 
 }

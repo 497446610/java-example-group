@@ -7,6 +7,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 import com.panda.example.biz.api.common.BaseService;
@@ -83,5 +84,15 @@ public class MemberServiceImpl extends BaseService implements IMemberService {
 	public String sayHello(String name) throws ServiceException {
 		return " hello " + name + "," + new Date().toString();
 	}
+
+	@Override
+	@Cacheable(cacheNames="test")
+	public String cacheData() throws ServiceException {
+		
+		return new Date().toString();
+	}
+	
+	
+	
 
 }
