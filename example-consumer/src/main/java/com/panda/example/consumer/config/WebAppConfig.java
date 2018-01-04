@@ -60,6 +60,8 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		//registry.addResourceHandler("/**").addResourceLocations("file:E:/panda/html/crm/");
+		registry.addResourceHandler("/**").addResourceLocations("classpath:/html/");
 		super.addResourceHandlers(registry);
 	}
 

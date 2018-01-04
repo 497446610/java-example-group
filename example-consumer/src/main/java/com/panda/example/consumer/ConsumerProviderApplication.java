@@ -19,6 +19,4 @@ public class ConsumerProviderApplication {
 		logger.info("service-consumer>>>>>>服务启动完成!");
 	}
 
-
-
 }
