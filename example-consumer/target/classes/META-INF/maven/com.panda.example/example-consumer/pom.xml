@@ -26,6 +26,13 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- dubbo -->
+		<dependency>
+			<groupId>com.gitee.reger</groupId>
+			<artifactId>spring-boot-starter-dubbo</artifactId>
+			<version>1.0.10</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
@@ -36,6 +43,13 @@
 			<groupId>com.101tec</groupId>
 			<artifactId>zkclient</artifactId>
 			<version>0.10</version>
+		</dependency>
+
+
+		<!-- zookeeper 配置中心 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zookeeper-config</artifactId>
 		</dependency>
 
 
@@ -51,6 +65,19 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Dalston.SR5</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<!-- 配置文件 -->
 	<profiles>

@@ -8,68 +8,67 @@ import com.alibaba.dubbo.config.MonitorConfig;
 import com.alibaba.dubbo.config.ProtocolConfig;
 import com.alibaba.dubbo.config.ProviderConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "spring.dubbo")
+//@ConfigurationProperties(prefix = "spring.dubbo")
 public class DubboProperties {
 
-    private String scan;
+	private String scan;
 
-    private ApplicationConfig application;
+	private ApplicationConfig application;
 
-    private RegistryConfig registry;
+	private RegistryConfig registry;
 
-    private ProtocolConfig protocol;
+	private ProtocolConfig protocol;
 
-    private MonitorConfig monitor;
-    
-    private ProviderConfig provider;
-    
-    private ModuleConfig module;
-    
-    private MethodConfig method;
-    
-    private ConsumerConfig consumer;
+	private MonitorConfig monitor;
 
-    public String getScan() {
-        return scan;
-    }
+	private ProviderConfig provider;
 
-    public void setScan(String scan) {
-        this.scan = scan;
-    }
+	private ModuleConfig module;
 
-    public ApplicationConfig getApplication() {
-        return application;
-    }
+	private MethodConfig method;
 
-    public void setApplication(ApplicationConfig application) {
-        this.application = application;
-    }
+	private ConsumerConfig consumer;
 
-    public RegistryConfig getRegistry() {
-        return registry;
-    }
+	public String getScan() {
+		return scan;
+	}
 
-    public void setRegistry(RegistryConfig registry) {
-        this.registry = registry;
-    }
+	public void setScan(String scan) {
+		this.scan = scan;
+	}
 
-    public ProtocolConfig getProtocol() {
-        return protocol;
-    }
+	public ApplicationConfig getApplication() {
+		return application;
+	}
 
-    public void setProtocol(ProtocolConfig protocol) {
-        this.protocol = protocol;
-    }
+	public void setApplication(ApplicationConfig application) {
+		this.application = application;
+	}
 
-    public MonitorConfig getMonitor() {
-        return monitor;
-    }
+	public RegistryConfig getRegistry() {
+		return registry;
+	}
 
-    public void setMonitor(MonitorConfig monitor) {
-        this.monitor = monitor;
-    }
+	public void setRegistry(RegistryConfig registry) {
+		this.registry = registry;
+	}
+
+	public ProtocolConfig getProtocol() {
+		return protocol;
+	}
+
+	public void setProtocol(ProtocolConfig protocol) {
+		this.protocol = protocol;
+	}
+
+	public MonitorConfig getMonitor() {
+		return monitor;
+	}
+
+	public void setMonitor(MonitorConfig monitor) {
+		this.monitor = monitor;
+	}
 
 	public ProviderConfig getProvider() {
 		return provider;

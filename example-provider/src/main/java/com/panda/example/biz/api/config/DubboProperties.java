@@ -8,9 +8,8 @@ import com.alibaba.dubbo.config.MonitorConfig;
 import com.alibaba.dubbo.config.ProtocolConfig;
 import com.alibaba.dubbo.config.ProviderConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "spring.dubbo")
+//@ConfigurationProperties(prefix = "spring.dubbo")
 public class DubboProperties {
 
     private String scan;

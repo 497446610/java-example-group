@@ -1,10 +1,7 @@
 package com.panda.example.biz.api.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
 
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ConsumerConfig;
@@ -15,9 +12,9 @@ import com.alibaba.dubbo.config.ProtocolConfig;
 import com.alibaba.dubbo.config.ProviderConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 
-@Configuration
+/*@Configuration
 @EnableConfigurationProperties(DubboProperties.class)
-@ImportResource({"classpath:dubbo-provider/*.xml"})
+@ImportResource({"classpath:dubbo-provider/*.xml"})*/
 public class DubboAutoConfiguration {
 
 	@Autowired

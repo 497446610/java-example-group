@@ -1,15 +1,15 @@
 package com.panda.example.consumer.controller.member;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.panda.example.biz.api.member.IMemberService;
+import com.reger.dubbo.annotation.Inject;
 
 @RestController
 public class MemberController {
 
-	@Autowired
+	@Inject
 	IMemberService memberSerivce;
 
 	@RequestMapping("/hello")
