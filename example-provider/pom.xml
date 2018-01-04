@@ -57,6 +57,11 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zookeeper-config</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>com.panda.example</groupId>
 			<artifactId>example-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -73,6 +78,18 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Dalston.SR5</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 
 	<!-- 配置文件 -->
 	<profiles>

@@ -1,4 +1,6 @@
-E:\example\java-example-group\example-provider\src\main\java\cn\teaey\sprintboot\test\EchoServerImpl.java
-E:\example\java-example-group\example-provider\src\main\java\org\example\provider\App.java
-E:\example\java-example-group\example-provider\src\main\java\cn\teaey\sprintboot\test\Server.java
-E:\example\java-example-group\example-provider\src\main\java\cn\teaey\sprintboot\test\EchoService.java
+E:\github\java-example-group\example-provider\src\main\java\com\panda\example\biz\api\config\DubboProperties.java
+E:\github\java-example-group\example-provider\src\main\java\com\panda\example\biz\api\config\DubboAutoConfiguration.java
+E:\github\java-example-group\example-provider\src\main\java\com\panda\example\biz\api\ServiceProviderApplication.java
+E:\github\java-example-group\example-provider\src\main\java\com\panda\example\biz\api\impl\member\MemberServiceImpl.java
+E:\github\java-example-group\example-provider\src\main\java\com\panda\example\biz\api\common\BaseService.java
+E:\github\java-example-group\example-provider\src\main\java\com\panda\example\biz\api\impl\mq\MQServiceImpl.java
