@@ -22,7 +22,7 @@ import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * 自定义web配置
+ * 自定义web配置,待后期扩展
  *
  */
 @Configuration
@@ -60,8 +60,8 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		//registry.addResourceHandler("/**").addResourceLocations("file:E:/panda/html/crm/");
-		//registry.addResourceHandler("/**").addResourceLocations("classpath:/html/");
+		// registry.addResourceHandler("/**").addResourceLocations("file:E:/panda/html/crm/");
+		// registry.addResourceHandler("/**").addResourceLocations("classpath:/html/");
 		super.addResourceHandlers(registry);
 	}
 
