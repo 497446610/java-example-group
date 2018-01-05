@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.panda.example.biz.api.BizModuleInfo;
 import com.panda.example.biz.api.common.BaseService;
 import com.panda.example.biz.api.member.IMemberService;
 import com.panda.example.biz.beans.member.MemberInfoBean;
@@ -21,12 +22,9 @@ import com.panda.example.dao.domain.member.MemberInfo;
 import com.panda.example.dao.mapper.MemberInfoMapper;
 import com.panda.example.dao.po.member.MemberInfoQueryPo;
 
-@Service(group="example",version="1.0.0")
+@Service(group = BizModuleInfo.group, version = BizModuleInfo.version)
 public class MemberServiceImpl extends BaseService implements IMemberService {
 
-	/**
-	 * 错误日志
-	 */
 	private final static Logger logger = LoggerFactory.getLogger(MemberServiceImpl.class);
 
 	@Autowired

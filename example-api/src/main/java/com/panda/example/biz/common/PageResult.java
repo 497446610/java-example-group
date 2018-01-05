@@ -32,4 +32,23 @@ public class PageResult extends PageParam {
 		this.rows = rows;
 	}
 
+	/**
+	 * 计算总的页数
+	 * 
+	 * @return
+	 */
+	public Long getTotalPage() {
+		if (getTotal() < 0) {
+			return 0L;
+		}
+		if (getPageSize() <= 0) {
+			return 0L;
+		}
+		Long count = getTotal() / getPageSize();
+		if (getTotal() % getPageSize() > 0) {
+			count++;
+		}
+		return count;
+	}
+
 }
