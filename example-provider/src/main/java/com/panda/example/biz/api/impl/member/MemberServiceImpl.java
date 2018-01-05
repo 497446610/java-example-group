@@ -21,8 +21,7 @@ import com.panda.example.dao.domain.member.MemberInfo;
 import com.panda.example.dao.mapper.MemberInfoMapper;
 import com.panda.example.dao.po.member.MemberInfoQueryPo;
 
-//@Component("memberService")
-@Service
+@Service(group="example",version="1.0.0")
 public class MemberServiceImpl extends BaseService implements IMemberService {
 
 	/**
