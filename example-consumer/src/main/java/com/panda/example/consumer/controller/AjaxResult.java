@@ -7,6 +7,8 @@ import java.util.List;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 
+import com.panda.example.biz.common.PageResult;
+
 /**
  * 说明: 功能描述
  * 
@@ -38,23 +40,23 @@ public class AjaxResult implements Serializable {
 	/**
 	 * 总的记录数
 	 */
-	private Integer total;
+	private Long total;
 
 	/**
 	 * 总的页数
 	 */
-	private Integer totalPage;
+	private Long totalPage;
 
 	/**
 	 * 验证错误信息
 	 */
 	private List<ValidError> errors;
 
-	public Integer getTotal() {
+	public Long getTotal() {
 		return total;
 	}
 
-	public void setTotal(Integer total) {
+	public void setTotal(Long total) {
 		this.total = total;
 	}
 
@@ -76,7 +78,7 @@ public class AjaxResult implements Serializable {
 		this.data = data;
 	}
 
-	public AjaxResult(Integer code, String message, Object data, Integer total, Integer totalPage) {
+	public AjaxResult(Integer code, String message, Object data, Long total, Long totalPage) {
 		this.code = code;
 		this.message = message;
 		this.data = data;
@@ -116,12 +118,24 @@ public class AjaxResult implements Serializable {
 		return new AjaxResult(SUCCESS, "", data);
 	}
 
-	public static AjaxResult success(Object data, Integer total, Integer totalPage) {
+	public static AjaxResult success(Object data, Long total, Long totalPage) {
 		return new AjaxResult(SUCCESS, "", data, total, totalPage);
 	}
 
-	public static AjaxResult validfail(List<ObjectError> errors) {
+	public static AjaxResult success(PageResult pageResult) {
+		return new AjaxResult(SUCCESS, "", pageResult.getRows(), pageResult.getTotal(), pageResult.getTotalPage());
+	}
+
+	public static AjaxResult validfailed(List<ObjectError> errors) {
 		return new AjaxResult(VALIDERROR, "", errors);
+	}
+
+	public static AjaxResult failed(String msgs) {
+		return new AjaxResult(FAILE, msgs);
+	}
+
+	public static AjaxResult failed(Integer errorId, String msgs) {
+		return new AjaxResult(errorId, msgs);
 	}
 
 	/**
@@ -169,11 +183,11 @@ public class AjaxResult implements Serializable {
 		this.data = data;
 	}
 
-	public Integer getTotalPage() {
+	public Long getTotalPage() {
 		return totalPage;
 	}
 
-	public void setTotalPage(Integer totalPage) {
+	public void setTotalPage(Long totalPage) {
 		this.totalPage = totalPage;
 	}
 
