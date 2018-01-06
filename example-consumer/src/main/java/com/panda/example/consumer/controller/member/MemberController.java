@@ -21,7 +21,7 @@ import com.panda.example.consumer.controller.AjaxResult;
 public class MemberController {
 	private final static Logger logger = LoggerFactory.getLogger(MemberController.class);
 
-	@Reference(group = BizModuleInfo.group, version = BizModuleInfo.version)
+	@Reference(group = BizModuleInfo.group, version = BizModuleInfo.version,retries=0)
 	IMemberService memberSerivce;
 
 	@RequestMapping("/hello")

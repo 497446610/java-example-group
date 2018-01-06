@@ -14,5 +14,10 @@ public class BizModuleInfo {
 	 * 业务版本号
 	 */
 	public final static String version = "1.0.0";
+	
+	
+	public final static int retries = 0;
+	
+	public final static int timeout = 6000;
 
 }
