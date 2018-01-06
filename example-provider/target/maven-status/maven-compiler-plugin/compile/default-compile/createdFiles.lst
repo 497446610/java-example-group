@@ -1,6 +1,0 @@
-com\panda\example\biz\api\config\DubboAutoConfiguration.class
-com\panda\example\biz\api\common\BaseService.class
-com\panda\example\biz\api\impl\member\MemberServiceImpl.class
-com\panda\example\biz\api\impl\mq\MQServiceImpl.class
-com\panda\example\biz\api\ServiceProviderApplication.class
-com\panda\example\biz\api\config\DubboProperties.class
