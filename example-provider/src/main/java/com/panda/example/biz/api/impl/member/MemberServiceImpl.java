@@ -82,6 +82,13 @@ public class MemberServiceImpl extends BaseService implements IMemberService {
 
 	@Override
 	public String sayHello(String name) throws ServiceException {
+		try {
+			Thread.sleep(8000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		logger.info(name);
 		return " hello " + name + "," + new Date().toString();
 	}
 
