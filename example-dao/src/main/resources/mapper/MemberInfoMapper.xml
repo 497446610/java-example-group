@@ -5,7 +5,7 @@
   <resultMap id="BaseResultMap" type="com.panda.example.dao.domain.member.MemberInfo">
     <id column="member_id" jdbcType="BIGINT" property="memberId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="address" jdbcType="VARCHAR" property="address" />
+    <!-- <result column="address" jdbcType="VARCHAR" property="address" /> -->
   </resultMap>
   
   <sql id="Base_Column_List">

@@ -22,7 +22,7 @@ import com.panda.example.dao.domain.member.MemberInfo;
 import com.panda.example.dao.mapper.MemberInfoMapper;
 import com.panda.example.dao.po.member.MemberInfoQueryPo;
 
-@Service(group = BizModuleInfo.group, version = BizModuleInfo.version)
+@Service(group = BizModuleInfo.group, version = BizModuleInfo.version,retries=0)
 public class MemberServiceImpl extends BaseService implements IMemberService {
 
 	private final static Logger logger = LoggerFactory.getLogger(MemberServiceImpl.class);
@@ -40,7 +40,7 @@ public class MemberServiceImpl extends BaseService implements IMemberService {
 
 			MemberInfoQueryPo queryPo = new MemberInfoQueryPo();
 			copyProperties(queryPo, query);
-			List<MemberInfo> queryList = memberInfoMapper.select(queryPo, page);
+			List<MemberInfo> queryList = memberInfoMapper.select(queryPo,page);
 
 			if (queryList == null || queryList.isEmpty()) {
 				return emptyPageResult(page);

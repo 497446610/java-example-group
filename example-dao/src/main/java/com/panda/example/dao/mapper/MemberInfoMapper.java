@@ -16,5 +16,7 @@ public interface MemberInfoMapper {
 	
 	List<MemberInfo> select(MemberInfoQueryPo query, Page page);
 
+	/*List<MemberInfo> select(MemberInfoQueryPo query);*/
+	
 	void deleteMember(Long memberId);
 }
