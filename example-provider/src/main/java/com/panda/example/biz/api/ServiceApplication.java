@@ -16,12 +16,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan(basePackages="com.panda.example.biz.api")
 @EnableCaching
 @EnableTransactionManagement
-public class ServiceProviderApplication {
+public class ServiceApplication {
 
-	private static final Logger logger = LoggerFactory.getLogger(ServiceProviderApplication.class);
+	private static final Logger logger = LoggerFactory.getLogger(ServiceApplication.class);
 
 	public static void main(String[] args) throws IOException{
-		SpringApplication.run(ServiceProviderApplication.class, args);
+		SpringApplication.run(ServiceApplication.class, args);
 		logger.info("service-provider>>>>>>服务启动完成!");
 		System.in.read();
 	}

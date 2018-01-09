@@ -21,7 +21,7 @@ import com.panda.example.dao.domain.member.MemberInfo;
 import com.panda.example.dao.mapper.MemberInfoMapper;
 import com.panda.example.dao.po.member.MemberInfoQueryPo;
 
-@Service
+@Service("memberService")
 public class MemberServiceImpl extends BaseService implements IMemberService {
 
 	private final static Logger logger = LoggerFactory.getLogger(MemberServiceImpl.class);

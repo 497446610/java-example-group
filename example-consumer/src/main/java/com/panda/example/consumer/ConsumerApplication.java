@@ -9,13 +9,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.panda.example.consumer")
-public class ConsumerProviderApplication {
+@ComponentScan(basePackages="com.panda.example.consumer")
+public class ConsumerApplication {
 
-	private static final Logger logger = LoggerFactory.getLogger(ConsumerProviderApplication.class);
+	private static final Logger logger = LoggerFactory.getLogger(ConsumerApplication.class);
 
 	public static void main(String[] args) throws IOException{
-		SpringApplication.run(ConsumerProviderApplication.class, args);
+		SpringApplication.run(ConsumerApplication.class, args);
 		logger.info("service-consumer>>>>>>服务启动完成!");
 	}
 

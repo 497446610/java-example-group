@@ -5,10 +5,6 @@
   <resultMap id="BaseResultMap" type="com.panda.example.dao.domain.member.MemberInfo">
     <id column="member_id" jdbcType="BIGINT" property="memberId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-<<<<<<< HEAD
-=======
-    <!-- <result column="address" jdbcType="VARCHAR" property="address" /> -->
->>>>>>> refs/remotes/origin/集成gitee
   </resultMap>
   
   <sql id="Base_Column_List">
