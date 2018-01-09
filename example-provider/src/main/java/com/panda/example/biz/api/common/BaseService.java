@@ -5,8 +5,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
-
+import org.apache.commons.beanutils.BeanUtils;
 import com.panda.example.biz.common.PageParam;
 import com.panda.example.biz.common.PageResult;
 import com.panda.example.dao.common.Page;
@@ -29,7 +28,7 @@ public class BaseService {
 		result.setRows(rows);
 		result.setPageIndex(page.getCurrPage());
 		result.setPageSize(page.getPageSize());
-		result.setTotal(page.getTotalPages());
+		result.setTotal(page.getTotal());
 		return result;
 	}
 

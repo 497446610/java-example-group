@@ -9,11 +9,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @MapperScan("com.panda.example.dao.mapper")
 @ComponentScan(basePackages="com.panda.example.biz.api")
 @EnableCaching
+@EnableTransactionManagement
 public class ServiceProviderApplication {
 
 	private static final Logger logger = LoggerFactory.getLogger(ServiceProviderApplication.class);

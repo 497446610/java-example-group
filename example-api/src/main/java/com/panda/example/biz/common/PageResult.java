@@ -1,9 +1,14 @@
 package com.panda.example.biz.common;
 
+import java.io.Serializable;
 import java.util.List;
 
 @SuppressWarnings({ "rawtypes" })
-public class PageResult extends PageParam {
+public class PageResult extends PageParam  implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5136443220495235824L;
 
 	/**
 	 * 总的记录数
@@ -30,6 +35,25 @@ public class PageResult extends PageParam {
 
 	public void setRows(List rows) {
 		this.rows = rows;
+	}
+
+	/**
+	 * 计算总的页数
+	 * 
+	 * @return
+	 */
+	public Long getTotalPage() {
+		if (getTotal() < 0) {
+			return 0L;
+		}
+		if (getPageSize() <= 0) {
+			return 0L;
+		}
+		Long count = getTotal() / getPageSize();
+		if (getTotal() % getPageSize() > 0) {
+			count++;
+		}
+		return count;
 	}
 
 }

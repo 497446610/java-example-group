@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.panda.example.biz.api.common.BaseService;
 import com.panda.example.biz.api.member.IMemberService;
@@ -21,12 +21,9 @@ import com.panda.example.dao.domain.member.MemberInfo;
 import com.panda.example.dao.mapper.MemberInfoMapper;
 import com.panda.example.dao.po.member.MemberInfoQueryPo;
 
-@Component("memberService")
+@Service
 public class MemberServiceImpl extends BaseService implements IMemberService {
 
-	/**
-	 * 错误日志
-	 */
 	private final static Logger logger = LoggerFactory.getLogger(MemberServiceImpl.class);
 
 	@Autowired
@@ -37,6 +34,14 @@ public class MemberServiceImpl extends BaseService implements IMemberService {
 
 		Page page = query2Page(query);
 
+		try {
+			Thread.sleep(8000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		logger.info("hello");
 		List<MemberInfoBean> rows = null;
 		try {
 
@@ -93,13 +98,10 @@ public class MemberServiceImpl extends BaseService implements IMemberService {
 	}
 
 	@Override
-	@Cacheable(cacheNames="test")
+	@Cacheable(cacheNames = "test")
 	public String cacheData() throws ServiceException {
-		
+
 		return new Date().toString();
 	}
-	
-	
-	
 
 }

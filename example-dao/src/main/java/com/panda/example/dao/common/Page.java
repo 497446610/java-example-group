@@ -44,12 +44,16 @@ public class Page extends PageRowBounds {
 	 * 根据pageSize与totalCount计算总页
 	 */
 	public Long getTotalPages() {
-		if (getTotalRecord() < 0) {
+		if (getTotal() == null || getTotal() <= 0) {
 			return 0L;
 		}
 
-		Long count = getTotalRecord() / getLimit();
-		if (getTotalRecord() % getLimit() > 0) {
+		if (getLimit() <= 0) {
+			return 0L;
+		}
+
+		Long count = getTotal() / getLimit();
+		if (getTotal() % getLimit() > 0) {
 			count++;
 		}
 		return count;
