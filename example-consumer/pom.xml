@@ -29,12 +29,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- dubbo -->
-		<dependency>
-			<groupId>com.gitee.reger</groupId>
-			<artifactId>spring-boot-starter-dubbo</artifactId>
-			<version>1.0.7</version>
-		</dependency>
 
 		<dependency>
 			<groupId>com.alibaba</groupId>
