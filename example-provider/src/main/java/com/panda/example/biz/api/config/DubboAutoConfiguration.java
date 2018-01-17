@@ -17,7 +17,7 @@ import com.alibaba.dubbo.config.RegistryConfig;
 
 @Configuration
 @EnableConfigurationProperties(DubboProperties.class)
-@ImportResource({"classpath:dubbo-provider/*.xml"})
+@ImportResource({"classpath:dubbo/*.xml"})
 public class DubboAutoConfiguration {
 
 	@Autowired

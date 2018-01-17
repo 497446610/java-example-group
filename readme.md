@@ -25,3 +25,5 @@
 		/config/example/spring/datasource/type这个key,type的值是com.alibaba.druid.pool.DruidDataSource
 		参考：zookeeper配置文件.png
 	
+集成elasticsearch时，要注意spring boot和elasticsearch版本的兼容性，低版本的spring boot可能和高版本的elasticsearch不兼容。
+spring boot 1.5.7 建议安装elasticsearch2.4.0版本的
