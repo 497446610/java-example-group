@@ -12,6 +12,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.ContextStartedEvent;
 import org.springframework.context.event.ContextStoppedEvent;
 
+@SuppressWarnings("rawtypes")
 public class ApplicationEventListener implements ApplicationListener {
 	private final static Logger logger = LoggerFactory.getLogger(ApplicationEventListener.class);
 	@Override
