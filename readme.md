@@ -1,13 +1,16 @@
 工程说明：
+====================
 	1、example-api：接口工程
 	2、example-dao: dao工程，domain/mapper相关
 	3、example-provider：业务服务工程
 	4、example-consumer: web工程
 依赖服务：
+===================
 	1、mysql服务器
 	2、zookeeper
 	3、redis服务
 配置方式：（使用中心化配置文件方式，mysql、redis等等相关配置信息全部存储在zookeeper中）
+=====================
 	1、在bootstrap.properties配置zookeeper相关的信息:
 		#ZooKeeper的连接字符串，如果是集群，逗号分隔节点，格式：ip:port[,ip2:port2,.....]
 		spring.cloud.zookeeper.connect-string=127.0.0.1:2181
@@ -24,6 +27,7 @@
 		以配置数据库连接如下：		
 		/config/example/spring/datasource/type这个key,type的值是com.alibaba.druid.pool.DruidDataSource
 		参考：zookeeper配置文件.png
-	
+其他注意事项
+=====================
 集成elasticsearch时，要注意spring boot和elasticsearch版本的兼容性，低版本的spring boot可能和高版本的elasticsearch不兼容。
 spring boot 1.5.7 建议安装elasticsearch2.4.0版本的
