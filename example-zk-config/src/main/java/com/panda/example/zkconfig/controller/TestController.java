@@ -9,10 +9,30 @@ public class TestController {
 
 	@Value("${url:default}")
 	private String url;
+	
+	
+	@Value("${zkServer:default}")
+	private String zkServer;
+	
+	
+	@Value("${spring.datasource.driverClassName:default}")
+	private String datasource;
 
 	@RequestMapping("hello")
 	public String hello() {
 		return url;
+	}
+	
+	
+	@RequestMapping("zkServer")
+	public String zkServer() {
+		return zkServer;
+	}
+
+	
+	@RequestMapping("datasource")
+	public String datasource() {
+		return datasource;
 	}
 
 }

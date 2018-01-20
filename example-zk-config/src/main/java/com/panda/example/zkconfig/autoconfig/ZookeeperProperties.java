@@ -40,11 +40,15 @@ public class ZookeeperProperties {
 	private String connectString = "localhost:2181";
 
 	/**
+	 * 配置文件存储的格式:properties,yml
+	 */
+	private String dataFormat = "properties";
+
+	/**
 	 * 是否启用zookeeper作为配置中心
 	 */
 	private boolean enabled = true;
-	
-	
+
 	/**
 	 * zk配置中心路径
 	 */
@@ -75,6 +79,15 @@ public class ZookeeperProperties {
 	 * The unit of time related to blocking on connection to Zookeeper
 	 */
 	private TimeUnit blockUntilConnectedUnit = TimeUnit.SECONDS;
+
+	
+	public String getDataFormat() {
+		return dataFormat;
+	}
+
+	public void setDataFormat(String dataFormat) {
+		this.dataFormat = dataFormat;
+	}
 
 	public String getConnectString() {
 		return this.connectString;
@@ -139,6 +152,5 @@ public class ZookeeperProperties {
 	public void setPath(String path) {
 		this.path = path;
 	}
-	
-	
+
 }
