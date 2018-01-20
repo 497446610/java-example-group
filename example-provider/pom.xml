@@ -28,10 +28,11 @@
 			<artifactId>spring-boot-starter-cache</artifactId>
 		</dependency>
 
-		<dependency>
+ 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
 		</dependency>
+ 
 
 
 
@@ -91,11 +92,11 @@
 		</dependency>
 
 		<!-- zookeeper 配置中心 -->
-		<dependency>
+ 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zookeeper-config</artifactId>
 		</dependency>
-
+ 
 		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
@@ -117,6 +118,13 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- <dependency>
+			<groupId>com.panda.example.zookeeper.config</groupId>
+			<artifactId>
+				spring-cloud-starter-zookeeper-config-ext
+			</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency> -->
 	</dependencies>
 
 	<dependencyManagement>
@@ -169,18 +177,18 @@
 				<filtering>true</filtering>
 				<directory>src/main/resources</directory>
 				<excludes>
-					<exclude>application-dev.properties</exclude>
-					<exclude>application-test.properties</exclude>
-					<exclude>application-prod.properties</exclude>
-					<exclude>application.properties</exclude>
+					<exclude>bootstrap-dev.properties</exclude>
+					<exclude>bootstrap-test.properties</exclude>
+					<exclude>bootstrap-prod.properties</exclude>
+					<exclude>bootstrap.properties</exclude>
 				</excludes>
 			</resource>
 			<resource>
 				<filtering>true</filtering>
 				<directory>src/main/resources</directory>
 				<includes>
-					<include>application-${environment}.properties</include>
-					<include>application.properties</include>
+					<include>bootstrap-${environment}.properties</include>
+					<include>bootstrap.properties</include>
 				</includes>
 			</resource>
 		</resources>
