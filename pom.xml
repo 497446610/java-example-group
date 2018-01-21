@@ -16,6 +16,9 @@
 		<module>zkconfig</module>
 		<module>example-test</module> -->
     <module>example-rmq-consumer</module>
+    <module>spring-cloud-starter-zookeeper-config-ext</module>
+    <module>test</module>
+    
   </modules>
 
 	<properties>
