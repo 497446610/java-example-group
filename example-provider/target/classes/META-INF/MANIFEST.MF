@@ -3,7 +3,7 @@ Implementation-Title: example-provider
 Implementation-Version: 1.5.7.RELEASE
 Built-By: Administrator
 Implementation-Vendor-Id: org.springframework.boot
-Build-Jdk: 1.8.0_91
+Build-Jdk: 1.8.0_162
 Implementation-URL: http://projects.spring.io/spring-boot/example-prov
  ider/
 Created-By: Maven Integration for Eclipse
