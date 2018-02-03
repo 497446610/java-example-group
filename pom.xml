@@ -12,13 +12,8 @@
 		<module>example-api</module>
 		<module>example-provider</module>
 		<module>example-consumer</module>
-		<!-- <module>zookeeper-config</module>
-		<module>zkconfig</module>
-		<module>example-test</module> -->
-    <module>example-rmq-consumer</module>
-    <module>spring-cloud-starter-zookeeper-config-ext</module>
-    <module>test</module>
-    
+    	<module>example-rmq-consumer</module>
+    	<module>example-swagger</module>
   </modules>
 
 	<properties>
